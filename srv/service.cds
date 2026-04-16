@@ -12,7 +12,7 @@ service RiskManagementService
         { grant: [ 'READ' ], to: [ 'RiskViewer' ] },
         { grant: [ '*' ],    to: [ 'RiskManager' ] }
     ]);
-
+    // changes made for testing commit
     @cds.redirection.target
     @odata.draft.enabled
     // 2. Apply restrictions to Mitigations
