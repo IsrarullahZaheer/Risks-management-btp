@@ -1,0 +1,26 @@
+{
+  "generationParameters": {
+    "generationDate": "Thu Apr 16 2026 07:10:56 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "Local CAP",
+    "metadataFilename": "",
+    "serviceUrl": "http://localhost:4004/service/RiskManagementService/",
+    "appName": "riskmanagement.risks",
+    "appTitle": "Risks",
+    "appDescription": "UI for Risks Management App",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.13",
+    "showMockDataInfo": false,
+    "generatorVersion": "1.22.0",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Risks"
+      }
+    ],
+    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/riskmanagement.risks/webapp/index.html"
+  }
+}
