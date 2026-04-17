@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/service/RiskManagementService/",
+        "uri": "service/RiskManagementService/",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -155,5 +155,9 @@
     "app": {
       "enableLazyLoading": true
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "lcap.RiskManagement"
   }
 }

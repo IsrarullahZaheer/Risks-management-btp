@@ -34,7 +34,12 @@
       },
       "auth": {
         "[development]": {
-          "kind": "dummy"
+          "kind": "dummy",
+          "users": {
+            "risk.viewer": { "roles": ["RiskViewer"] },
+            "risk.manager": { "roles": ["RiskManager"] },
+            "*": { "roles": ["RiskManager"] }
+          }
         },
         "[production]": {
           "kind": "xsuaa"
@@ -42,7 +47,15 @@
       },
       "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",
-        "model": "srv/external/API_BUSINESS_PARTNER"
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "[production]": {
+          "credentials": {
+            "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER",
+            "headers": {
+              "APIKey": "gtDn5DegmRdizgvSD1X6n6BKKMiXkTiA"
+            }
+          }
+        }
       }
     }
   },

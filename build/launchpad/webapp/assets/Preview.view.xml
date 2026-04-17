@@ -10,7 +10,7 @@
     core:require="{ sapMLib: 'sap/m/library' }">
     <f:ShellBar
             title="Application Development"
-            secondTitle="Project Preview"
+            secondTitle="Application Overview"
             homeIcon="assets/SAP_R_grad.svg">
     </f:ShellBar>
     <l:BlockLayout>
@@ -21,7 +21,7 @@
                 class="customCellImageBackground">
                 <VBox>
                     <Text text="1.0.0" />
-                    <Link class="titleLink" text="View Log" target="_blank" href="" visible="false" />
+                    <Link class="titleLink" text="View Log" target="_blank" href="https://logs.cf.us10-001.hana.ondemand.com/app/dashboards#/view/Overview?_g=(filters:!((query:(match_phrase:(component_name:RiskManagement-srv)))))" visible="true" />
                 </VBox>
             </l:BlockLayoutCell>
         </l:BlockLayoutRow>

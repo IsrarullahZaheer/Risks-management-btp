@@ -1,22 +1,23 @@
 using { RiskManagement as my } from '../db/schema.cds';
 using { API_BUSINESS_PARTNER as external } from './external/API_BUSINESS_PARTNER';
 
-@path : '/service/RiskManagementService'
+@path    : '/service/RiskManagementService'
+@requires: 'authenticated-user'
 service RiskManagementService
 {
     @cds.redirection.target
     @odata.draft.enabled
-    // 1. Apply restrictions to Risks
-    entity Risks as projection on my.Risks
+    entity Risks as projection on my.Risks;
+
     annotate Risks with @(restrict: [
         { grant: [ 'READ' ], to: [ 'RiskViewer' ] },
         { grant: [ '*' ],    to: [ 'RiskManager' ] }
     ]);
-    // changes made for testing commit
+
     @cds.redirection.target
     @odata.draft.enabled
-    // 2. Apply restrictions to Mitigations
-    entity Mitigations as projection on my.Mitigations
+    entity Mitigations as projection on my.Mitigations;
+
     annotate Mitigations with @(restrict: [
         { grant: [ 'READ' ], to: [ 'RiskViewer' ] },
         { grant: [ '*' ],    to: [ 'RiskManager' ] }
@@ -32,8 +33,3 @@ service RiskManagementService
         BusinessPartnerIsBlocked
     };
 }
-
-annotate RiskManagementService with @requires :
-[
-    'authenticated-user'
-];
